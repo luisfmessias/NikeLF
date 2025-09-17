@@ -56,7 +56,7 @@ header nav ul li:hover::after {
 
 .parede {
     width: 50%;
-    height: 100dvh;
+    height: 100vh;
     background-image: linear-gradient(#ccbdb0,
             #899794);
     position: absolute;
@@ -64,6 +64,7 @@ header nav ul li:hover::after {
     left: 80%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    transition: all 0.7s ease;
 }
 
 .nike {
@@ -96,15 +97,25 @@ header nav ul li:hover::after {
 .list {
     width: 32%;
     margin-left: 400px;
+    position: relative;
 }
 
 .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
     flex-direction: row-reverse;
     white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.item.active {
+    opacity: 1; 
 }
 
 .active {
@@ -118,14 +129,17 @@ header nav ul li:hover::after {
     background: linear-gradient(90deg, #ccbdb0, #419b87);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
 }
 
 .product-img img {
     filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.342));
     transform: rotate(-8deg);
     z-index: 5;
+    transition: all 0.5s ease;
 }
-.btn{
+
+.btn {
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -136,7 +150,7 @@ header nav ul li:hover::after {
     font-size: 1em;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: rgb(230, 229, 229);
 }
 
@@ -162,8 +176,8 @@ header nav ul li:hover::after {
 }
 
 .arrow-btn:hover {
-    background-color: rgba(0, 247, 255, 0.2);
-    border-color: #00f7ff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
 }
 
 .indicators {
@@ -199,4 +213,44 @@ header nav ul li:hover::after {
 
 .dot.active {
     background-color: #000000;
+}
+
+/*correção de tamanhos*/
+
+#sabrina img{
+    margin-top: 15px;
+}
+
+#sabrinaName {
+    font-size: 50px;
+    margin-top: 215px;
+    margin-right: 290px;
+}
+
+#sabrinaDesc {
+    margin-right: 42px;
+    margin-top: -3px;
+
+}
+
+#jaName {
+    margin-top: 125px;
+}
+
+#jaDesc {
+    margin-right: 0px;
+    margin-top: -5px;
+}
+
+#lebronName {
+    margin-top: 135px;
+}
+
+#lebronDesc{
+    margin-right: 11px;
+    margin-top: -2px;
+}
+
+#descAva {
+    margin-right: 9px;
 }
