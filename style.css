@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.logo img {
+    width: 100px;
+    height: 40px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 90px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0px;
+}
+
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transition: 0.2s width ease;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.parede {
+    width: 50%;
+    height: 100dvh;
+    background-image: linear-gradient(#ccbdb0,
+            #899794);
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.nike {
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    top: 18%;
+    left: 60%;
+    letter-spacing: 35px;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+    font-size: 18rem;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    transform: rotate(-90deg);
+}
+
+.justdoit {
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-size: 7rem;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    z-index: -1;
+    letter-spacing: 5px;
+}
+
+.list {
+    width: 32%;
+    margin-left: 400px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-direction: row-reverse;
+    white-space: nowrap;
+}
+
+.active {
+    display: flex;
+}
+
+.product-name {
+    font-family: "Anton", sans-serif;
+    font-size: 50px;
+    margin-top: 130px;
+    background: linear-gradient(90deg, #ccbdb0, #419b87);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.product-img img {
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.342));
+    transform: rotate(-8deg);
+    z-index: 5;
+}
+.btn{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+.btn:hover{
+    background-color: rgb(230, 229, 229);
+}
+
+
+.arrows {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.arrow-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.arrow-btn:hover {
+    background-color: rgba(0, 247, 255, 0.2);
+    border-color: #00f7ff;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 5;
+}
+
+.numbers {
+    font-family: "Anton", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 40px;
+    height: 4px;
+    background-color: rgba(34, 34, 34, 0.2);
+    border-radius: 2px;
+}
+
+.dot.active {
+    background-color: #000000;
+}
